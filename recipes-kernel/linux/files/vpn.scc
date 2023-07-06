@@ -1,0 +1,7 @@
+
+define KTYPE preempt-rt
+define LINUX_KERNEL_TYPE preempt-rt
+
+include ktype/preempt-rt.scc
+
+kconf non-hardware wireguard.cfg
