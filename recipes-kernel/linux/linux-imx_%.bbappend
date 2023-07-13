@@ -1,7 +1,7 @@
 FILESEXTRAPATHS:prepend := "${THISDIR}/files:"
 
 #AT: linux-imx kernels use delta configs instalead of fragments:
-#DELTA_KERNEL_DEFCONFIG:append = " wireguard.config"
+DELTA_KERNEL_DEFCONFIG:append = " myboard/cfg/wireguard.cfg"
 
 #SRC_URI += "\
 #	file://myboard/cfg/wireguard.cfg \
