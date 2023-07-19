@@ -1,0 +1,10 @@
+header:
+  version: 11
+  includes:
+    - webinar-base.yml
+machine: qemuarm64
+distro: poky
+local_conf_header:
+    customplocal-conf: |
+       BBMASK = "linux-imx|jailhouse"
+       CORE_IMAGE_EXTRA_INSTALL += "hello-mod kernel-modules"

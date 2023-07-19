@@ -1,0 +1,98 @@
+header:
+  version: 11
+distro: nxp-real-time-edge
+target: nxp-image-real-time-edge 
+repos:
+  poky: 
+    url: "https://git.yoctoproject.org/poky" 
+    refspec: kirkstone
+    path: poky
+    layers:
+      meta:
+      meta-poky:
+  meta-browser:
+    url: "https://github.com/OSSystems/meta-browser.git"
+    refspec: master
+    path: layers/meta-browser
+    layers:
+      meta-chromium:
+  meta-openembedded:
+    url: "https://github.com/openembedded/meta-openembedded.git" 
+    refspec: kirkstone 
+    path: "layers/meta-openembedded"
+    layers: 
+      meta-oe:
+      meta-filesystems:
+      meta-gnome:
+      meta-networking:
+      meta-multimedia:
+      meta-perl: 
+      meta-python: 
+  meta-security: 
+    url: "https://git.yoctoproject.org/meta-security"
+    refspec: kirkstone
+    path: layers/meta-security
+    layers: 
+      meta-security-compliance:
+      ../meta-security:
+  meta-clang: 
+    url: "https://github.com/kraj/meta-clang.git"
+    refspec: kirkstone
+    path: layers/meta-clang
+  meta-virtualization: 
+    url: "https://git.yoctoproject.org/meta-virtualization"
+    refspec: kirkstone
+    path: layers/meta-virtualization 
+  meta-qt6:
+    url: "https://code.qt.io/yocto/meta-qt6.git"
+    refspec: "ed785a25d12e365d1054700d4fc94a053176eb14"
+    path: layers/meta-qt6
+  meta-cpan:
+    url: "https://github.com/rehsack/meta-cpan.git"
+    refspec: "3d82a95da95395c20ae13a89dd7de0cebcc27bfa"
+    path: layers/meta-cpan
+  meta-freescale:
+    url: "https://github.com/Freescale/meta-freescale.git"
+    refspec: kirkstone
+    path: layers/meta-freescale
+  meta-freescale-3rdparty:
+    url: "https://github.com/Freescale/meta-freescale-3rdparty.git"
+    refspec: kirkstone
+    path: layers/meta-freescale-3rdparty
+  meta-freescale-distro:
+    url: "https://github.com/Freescale/meta-freescale-distro.git"
+    refspec: kirkstone
+    path: layers/meta-freescale-distro
+  meta-imx:
+    url: "https://github.com/nxp-imx/meta-imx.git"
+    refspec: kirkstone-5.15.71-2.2.1  
+    path: layers/meta-imx
+    layers:
+      meta-bsp:
+      meta-sdk:
+      meta-ml:
+      meta-v2x:
+  meta-real-time-edge:
+    url: "https://github.com/nxp-real-time-edge-sw/meta-real-time-edge.git"
+    refspec: kirkstone  
+    path: layers/meta-real-time-edge
+  meta-rtos-industrial:
+    url: "https://github.com/nxp-real-time-edge-sw/meta-rtos-industrial.git"
+    refspec: kirkstone  
+    path: layers/meta-rtos-industrial
+  meta-nxp-demo-experience:
+    url: "https://github.com/nxp-imx-support/meta-nxp-demo-experience.git"
+    refspec: kirkstone  
+    path: layers/meta-nxp-demo-experience
+  meta-nxp-harpoon:
+    url: "https://github.com/NXP/meta-nxp-harpoon"
+    refspec: "811000d1289c45f57ab321426c92c882a6d7ffbe"
+    path: layers/meta-nxp-harpoon
+  meta-nxp-avb:
+    url: "https://github.com/NXP/meta-nxp-avb"
+    refspec: "99250391a345821b3f55497c68b15d6cd974a19a"
+    path: layers/meta-nxp-avb
+local_conf_header: 
+  customplocal-conf: |
+    DISTRO_FEATURES:append = " virtualization security"
+    PACKAGE_CLASSES = "package_rpm"
