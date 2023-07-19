@@ -117,12 +117,17 @@ cd extra-layers
 
 git clone https://github.com/Doulos/meta-my-bsp
 ```
+Make sure we have the folowing directories at the same level:
+```shell
+extra-layers/meta-my-bsp
+sources/poky
+```
 
-We are ready to build from the *yocto-real-time-edge*:
+We are ready to build custom *yocto-real-time-edge* image:
 ```shell
 cd ../
 
-TEMPLATECONF=extra-layers/meta-my-bsp/conf/templates/build-real-time-edge-with-wireguard soure sources/poky/oe-init-build-env build-test-real-time-edge-with-wireguard
+TEMPLATECONF=$(pwd)/extra-layers/meta-my-bsp/conf/templates/build-real-time-edge-with-wireguard soure sources/poky/oe-init-build-env build-test-real-time-edge-with-wireguard
 
 bitbake nxp-image-real-time-edge
 ``` 
