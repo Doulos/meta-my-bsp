@@ -1,0 +1,11 @@
+header:
+  version: 11
+  includes:
+    - webinar-base.yml
+    - NXP-real-time-edge.yml
+machine: imx93-11x11-lpddr4x-evk 
+local_conf_header:
+    customplocal-conf: |
+       CORE_IMAGE_EXTRA_INSTALL += " hello-mod kernel-modules"
+       DISTRO_FEATURES:append = " virtualization security"
+

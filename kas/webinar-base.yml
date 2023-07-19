@@ -1,0 +1,14 @@
+header:
+  version: 11
+repos:
+  poky: 
+    url: "https://git.yoctoproject.org/poky" 
+    refspec: kirkstone
+    path: poky
+    layers:
+      meta:
+      meta-poky:
+  meta-my-bsp:
+    url: "https://github.com/Doulos/meta-my-bsp"
+    refspec: kirkstone
+    path: layers/meta-my-bsp
