@@ -42,76 +42,8 @@ kas build kas/imx93-11x11-evk.yml
 ```
 
 ## Using the Yocto built-in configuartion management feature
-The *kirkstone* branch doesn't support this feature.
-You need to checkout the *mickledore* branch.
-The configuation settings used during the Webinar have been saved to the meta-my-bsp *mickledore* branch using:
- "bitbake-layers save-build-conf meta-my-bsp build-real-time-edge-with-wireguard".
 
+The *kirkstone* branch of this layer doesn't support this feature.
 
-### Building QEMU core-image-minimal
-
-Clone the *poky* build system 
-
-```shell
-git clone git://git.yoctoproject.org/poky
-
-cd poky
-
-git checkout origin/mickledore -t
-
-cd ../
-
-```
-
-Copy or clone this meta-my-bsp layer into a directory called *layers*:
-```shell
-mkdir layers
-
-cd layers
-
-git clone https://github.com/Doulos/meta-my-bsp
-
-cd meta-my-bsp
-
-git chechout origin/mickledore -t
-
-cd ..
-
-```
-
-We are ready to build 
-
-
-### Building NXP Realtime Edge image
-
-To make use of this, we need to clone all the depend layers first:
-
-```shell
-mkdir yocto-real-time-edge
-
-cd yocto-real-time-edge
-
-repo init -u https://github.com/nxp-real-time-edge-sw/yocto-real-time-edge.git -b real-time-edge-mickledore -m real-time-edge-2.6.0.xml
-
-repo sync
-```
-
-Then, in the same *yocto-real-time-edge* directory, create the *extra-layers* sub-directory.
-The mete-my-bsp layer must be copied (or cloned) into *extra-layers*:
-```shell
-mkdir extra-layers
-
-cd extra-layers
-
-git clone https://github.com/Doulos/meta-my-bsp
-```
-
-We are ready to build from the *yocto-real-time-edge*:
-```shell
-cd ../
-
-TEMPLATECONF=extra-layers/meta-my-bsp/conf/templates/build-real-time-edge-with-wireguard soure sources/poky/oe-init-build-env build-test-real-time-edge-with-wireguard
-
-bitbake nxp-image-real-time-edge
-``` 
+You need to checkout the *mickledore* branch. The README.md has additional information. 
 
