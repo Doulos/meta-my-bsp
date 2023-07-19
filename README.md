@@ -33,12 +33,12 @@ This layer contains two Kas YAML configuration files for QEMU and i.MX 93 EVK.
 
 1. Build for QEMU ARM64
 ```shell
-kas build kas/qemuarm64.yml
+kas build meta-my-bsp/kas/qemuarm64.yml
 ```
 
 2. Build for i.MX 93 EVK
 ```shell
-kas build kas/imx93-11x11-evk.yml 
+kas build meta-my-bsp/kas/imx93-11x11-evk.yml 
 ```
 
 ## Using the Yocto built-in configuartion management feature
