@@ -11,10 +11,10 @@ This README file contains information on the contents of the meta-my-bsp layer.
 ## Dependencies
 
   URI: https://github.com/yoctoproject/poky.git
-  branch: kirkstone
+  branch: mickledore
 
   URI: https://github.com/Doulos/meta-my-bsp.git 
-  branch: kirkstone
+  branch: mickledore
 
   When building for the i.MX 93 EVK, see:
   https://www.nxp.com/docs/en/user-guide/REALTIMEEDGEUG_Rev2.4.pdf (Realtime Edge User Guide)

@@ -1,0 +1,98 @@
+header:
+  version: 11
+distro: nxp-real-time-edge
+target: nxp-image-real-time-edge 
+repos:
+  poky: 
+    url: "https://git.yoctoproject.org/poky" 
+    refspec: mickledore
+    path: poky
+    layers:
+      meta:
+      meta-poky:
+  meta-browser:
+    url: "https://github.com/OSSystems/meta-browser.git"
+    refspec: master
+    path: layers/meta-browser
+    layers:
+      meta-chromium:
+  meta-openembedded:
+    url: "https://github.com/openembedded/meta-openembedded.git" 
+    refspec: mickledore 
+    path: "layers/meta-openembedded"
+    layers: 
+      meta-oe:
+      meta-filesystems:
+      meta-gnome:
+      meta-networking:
+      meta-multimedia:
+      meta-perl: 
+      meta-python: 
+  meta-security: 
+    url: "https://git.yoctoproject.org/meta-security"
+    refspec: mickledore
+    path: layers/meta-security
+    layers: 
+      meta-security-compliance:
+      ../meta-security:
+  meta-clang: 
+    url: "https://github.com/kraj/meta-clang.git"
+    refspec: mickledore
+    path: layers/meta-clang
+  meta-virtualization: 
+    url: "https://git.yoctoproject.org/meta-virtualization"
+    refspec: mickledore
+    path: layers/meta-virtualization 
+  meta-qt6:
+    url: "https://code.qt.io/yocto/meta-qt6.git"
+    refspec: "1406d0a85525a71fe5d7892d7f915404290a78ad"
+    path: layers/meta-qt6
+  meta-cpan:
+    url: "https://github.com/rehsack/meta-cpan.git"
+    refspec: "3d82a95da95395c20ae13a89dd7de0cebcc27bfa"
+    path: layers/meta-cpan
+  meta-freescale:
+    url: "https://github.com/Freescale/meta-freescale.git"
+    refspec: mickledore
+    path: layers/meta-freescale
+  meta-freescale-3rdparty:
+    url: "https://github.com/Freescale/meta-freescale-3rdparty.git"
+    refspec: mickledore
+    path: layers/meta-freescale-3rdparty
+  meta-freescale-distro:
+    url: "https://github.com/Freescale/meta-freescale-distro.git"
+    refspec: mickledore
+    path: layers/meta-freescale-distro
+  meta-imx:
+    url: "https://github.com/nxp-imx/meta-imx.git"
+    refspec: mickledore-6.1.22-2.0.0 
+    path: layers/meta-imx
+    layers:
+      meta-bsp:
+      meta-sdk:
+      meta-ml:
+      meta-v2x:
+  meta-real-time-edge:
+    url: "https://github.com/nxp-real-time-edge-sw/meta-real-time-edge.git"
+    refspec: mickledore
+    path: layers/meta-real-time-edge
+  meta-rtos-industrial:
+    url: "https://github.com/nxp-real-time-edge-sw/meta-rtos-industrial.git"
+    refspec: mickledore
+    path: layers/meta-rtos-industrial
+  meta-nxp-demo-experience:
+    url: "https://github.com/nxp-imx-support/meta-nxp-demo-experience.git"
+    refspec: mickledore
+    path: layers/meta-nxp-demo-experience
+  meta-nxp-harpoon:
+    url: "https://github.com/NXP/meta-nxp-harpoon"
+    refspec: "666284967d27b390fff27f3d483fc703ef19e19d"
+    path: layers/meta-nxp-harpoon
+  meta-nxp-avb:
+    url: "https://github.com/NXP/meta-nxp-avb"
+    refspec: "6766a5cb2a68c5ff8183fc87003ae9124cbeed25"
+    path: layers/meta-nxp-avb
+local_conf_header: 
+  customplocal-conf: |
+    DISTRO_FEATURES:append = " virtualization security"
+    PACKAGE_CLASSES = "package_rpm"
