@@ -1,0 +1,31 @@
+
+To make use of this, we need to clone all the depend layers first:
+
+```shell
+mkdir yocto-real-time-edge
+
+cd yocto-real-time-edge
+
+repo init -u https://github.com/nxp-real-time-edge-sw/yocto-real-time-edge.git -b real-time-edge-mickledore -m real-time-edge-2.6.0.xml
+
+repo sync
+```
+
+Then, in the same *yocto-real-time-edge* directory, create the *extra-layers* sub-directory.
+The mete-my-bsp layer must be copied (or cloned) into *extra-layers*:
+```shell
+mkdir extra-layers
+
+cd extra-layers
+
+git clone https://github.com/Doulos/meta-my-bsp
+```
+
+We are ready to build from the *yocto-real-time-edge*:
+```shell
+cd ../
+
+TEMPLATECONF=extra-layers/meta-my-bsp/conf/templates/build-real-time-edge-with-wireguard soure sources/poky/oe-init-build-env build-test-real-time-edge-with-wireguard
+
+bitbake nxp-image-real-time-edge
+```

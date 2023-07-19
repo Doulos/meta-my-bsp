@@ -1,0 +1,13 @@
+FIXME: Please place here the description of this build configuration.
+
+It will be shown to the users when they set up their builds via TEMPLATECONF.
+
+Make sure you have these directories at the same level:
+poky
+layers/meta-my-bsp
+
+Fron one directory above poky, try this:
+
+TEMPLATECONF=$(pwd)/layers/meta-my-bsp/conf/templates/build-qemuarm64-with-wireguard . poky/oe-init-build-env build-try-build-qemuarm64-with-wireguard
+
+
