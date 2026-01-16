@@ -3,12 +3,12 @@ header:
 repos:
   poky: 
     url: "https://git.yoctoproject.org/poky" 
-    refspec: kirkstone
+    refspec: mickledore
     path: poky
     layers:
       meta:
       meta-poky:
   meta-my-bsp:
     url: "https://github.com/Doulos/meta-my-bsp"
-    refspec: kirkstone
+    refspec: mickledore
     path: layers/meta-my-bsp

@@ -1,9 +1,8 @@
 
 FILESEXTRAPATHS:prepend := "${THISDIR}/files:"
 
-# linux-imx kernels use delta configs instead of fragments:
-
-DELTA_KERNEL_DEFCONFIG:append = " myboard/cfg/usb-kaw-eth.config"
+#AT: linux-imx kernels use delta configs instalead of fragments:
+DELTA_KERNEL_DEFCONFIG:append = " myboard/cfg/wireguard.cfg"
 
 #SRC_URI += "\
 #	file://myboard/cfg/wireguard.cfg \

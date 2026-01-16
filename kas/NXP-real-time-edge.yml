@@ -5,7 +5,7 @@ target: nxp-image-real-time-edge
 repos:
   poky: 
     url: "https://git.yoctoproject.org/poky" 
-    refspec: kirkstone
+    refspec: mickledore
     path: poky
     layers:
       meta:
@@ -18,7 +18,7 @@ repos:
       meta-chromium:
   meta-openembedded:
     url: "https://github.com/openembedded/meta-openembedded.git" 
-    refspec: kirkstone 
+    refspec: mickledore 
     path: "layers/meta-openembedded"
     layers: 
       meta-oe:
@@ -30,22 +30,22 @@ repos:
       meta-python: 
   meta-security: 
     url: "https://git.yoctoproject.org/meta-security"
-    refspec: kirkstone
+    refspec: mickledore
     path: layers/meta-security
     layers: 
       meta-security-compliance:
       ../meta-security:
   meta-clang: 
     url: "https://github.com/kraj/meta-clang.git"
-    refspec: kirkstone
+    refspec: mickledore
     path: layers/meta-clang
   meta-virtualization: 
     url: "https://git.yoctoproject.org/meta-virtualization"
-    refspec: kirkstone
+    refspec: mickledore
     path: layers/meta-virtualization 
   meta-qt6:
     url: "https://code.qt.io/yocto/meta-qt6.git"
-    refspec: "ed785a25d12e365d1054700d4fc94a053176eb14"
+    refspec: "1406d0a85525a71fe5d7892d7f915404290a78ad"
     path: layers/meta-qt6
   meta-cpan:
     url: "https://github.com/rehsack/meta-cpan.git"
@@ -53,19 +53,19 @@ repos:
     path: layers/meta-cpan
   meta-freescale:
     url: "https://github.com/Freescale/meta-freescale.git"
-    refspec: kirkstone
+    refspec: mickledore
     path: layers/meta-freescale
   meta-freescale-3rdparty:
     url: "https://github.com/Freescale/meta-freescale-3rdparty.git"
-    refspec: kirkstone
+    refspec: mickledore
     path: layers/meta-freescale-3rdparty
   meta-freescale-distro:
     url: "https://github.com/Freescale/meta-freescale-distro.git"
-    refspec: kirkstone
+    refspec: mickledore
     path: layers/meta-freescale-distro
   meta-imx:
     url: "https://github.com/nxp-imx/meta-imx.git"
-    refspec: kirkstone-5.15.71-2.2.1  
+    refspec: mickledore-6.1.22-2.0.0 
     path: layers/meta-imx
     layers:
       meta-bsp:
@@ -74,23 +74,23 @@ repos:
       meta-v2x:
   meta-real-time-edge:
     url: "https://github.com/nxp-real-time-edge-sw/meta-real-time-edge.git"
-    refspec: kirkstone  
+    refspec: mickledore
     path: layers/meta-real-time-edge
   meta-rtos-industrial:
     url: "https://github.com/nxp-real-time-edge-sw/meta-rtos-industrial.git"
-    refspec: kirkstone  
+    refspec: mickledore
     path: layers/meta-rtos-industrial
   meta-nxp-demo-experience:
     url: "https://github.com/nxp-imx-support/meta-nxp-demo-experience.git"
-    refspec: kirkstone  
+    refspec: mickledore
     path: layers/meta-nxp-demo-experience
   meta-nxp-harpoon:
     url: "https://github.com/NXP/meta-nxp-harpoon"
-    refspec: "811000d1289c45f57ab321426c92c882a6d7ffbe"
+    refspec: "666284967d27b390fff27f3d483fc703ef19e19d"
     path: layers/meta-nxp-harpoon
   meta-nxp-avb:
     url: "https://github.com/NXP/meta-nxp-avb"
-    refspec: "99250391a345821b3f55497c68b15d6cd974a19a"
+    refspec: "6766a5cb2a68c5ff8183fc87003ae9124cbeed25"
     path: layers/meta-nxp-avb
 local_conf_header: 
   customplocal-conf: |
