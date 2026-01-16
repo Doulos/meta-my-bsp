@@ -3,12 +3,12 @@ header:
 repos:
   poky: 
     url: "https://git.yoctoproject.org/poky" 
-    refspec: mickledore
+    refspec: scarthgap
     path: poky
     layers:
       meta:
       meta-poky:
   meta-my-bsp:
     url: "https://github.com/Doulos/meta-my-bsp"
-    refspec: mickledore
+    refspec: scarthgap
     path: layers/meta-my-bsp

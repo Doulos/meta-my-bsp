@@ -11,13 +11,13 @@ This README file contains information on the contents of the meta-my-bsp layer.
 ## Dependencies
 
   URI: https://github.com/yoctoproject/poky.git
-  branch: mickledore
+  branch: scarthgap
 
   URI: https://github.com/Doulos/meta-my-bsp.git 
-  branch: mickledore
+  branch: scarthgap
 
   URI: https://github.com/Doulos/meta-my-bsp.git 
-  branch: mickledore
+  branch: scarthgap
 
   When building for the i.MX 93 EVK, see:
   https://www.nxp.com/docs/en/user-guide/REALTIMEEDGEUG_Rev2.4.pdf (Realtime Edge User Guide)
@@ -45,8 +45,8 @@ kas build meta-my-bsp/kas/imx93-11x11-evk.yml
 
 ## Using the Yocto built-in configuartion management feature
 
-You need to checkout the *mickledore* branch. The README.md has additional information. 
-The configuation settings used during the Webinar have been saved to the meta-my-bsp *mickledore* branch.
+You need to checkout the *scarthgap* branch. The README.md has additional information. 
+The configuation settings used during the Webinar have been saved to the meta-my-bsp *scarthgap* branch.
 
 For the QEMU emulator, the configurations were saved using:
  "bitbake-layers save-build-conf <PATH TO>/meta-my-bsp build-qemuarm64-with-wireguard".
@@ -65,7 +65,7 @@ git clone git://git.yoctoproject.org/poky
 
 cd poky
 
-git checkout origin/mickledore -t
+git checkout origin/scarthgap -t
 
 cd ../
 
@@ -82,7 +82,7 @@ git clone https://github.com/Doulos/meta-my-bsp
 
 cd meta-my-bsp
 
-git chechout origin/mickledore -t
+git chechout origin/scarthgap -t
 
 cd ..
 ```
@@ -107,7 +107,7 @@ mkdir yocto-real-time-edge
 
 cd yocto-real-time-edge
 
-repo init -u https://github.com/nxp-real-time-edge-sw/yocto-real-time-edge.git -b real-time-edge-mickledore -m real-time-edge-2.6.0.xml
+repo init -u https://github.com/nxp-real-time-edge-sw/yocto-real-time-edge.git -b real-time-edge-scarthgap -m real-time-edge-2.6.0.xml
 
 repo sync
 ```

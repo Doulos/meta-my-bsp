@@ -5,7 +5,7 @@ target: nxp-image-real-time-edge
 repos:
   poky: 
     url: "https://git.yoctoproject.org/poky" 
-    refspec: mickledore
+    refspec: scarthgap
     path: poky
     layers:
       meta:
@@ -18,7 +18,7 @@ repos:
       meta-chromium:
   meta-openembedded:
     url: "https://github.com/openembedded/meta-openembedded.git" 
-    refspec: mickledore 
+    refspec: scarthgap 
     path: "layers/meta-openembedded"
     layers: 
       meta-oe:
@@ -30,18 +30,18 @@ repos:
       meta-python: 
   meta-security: 
     url: "https://git.yoctoproject.org/meta-security"
-    refspec: mickledore
+    refspec: scarthgap
     path: layers/meta-security
     layers: 
       meta-security-compliance:
       ../meta-security:
   meta-clang: 
     url: "https://github.com/kraj/meta-clang.git"
-    refspec: mickledore
+    refspec: scarthgap
     path: layers/meta-clang
   meta-virtualization: 
     url: "https://git.yoctoproject.org/meta-virtualization"
-    refspec: mickledore
+    refspec: scarthgap
     path: layers/meta-virtualization 
   meta-qt6:
     url: "https://code.qt.io/yocto/meta-qt6.git"
@@ -53,19 +53,19 @@ repos:
     path: layers/meta-cpan
   meta-freescale:
     url: "https://github.com/Freescale/meta-freescale.git"
-    refspec: mickledore
+    refspec: scarthgap
     path: layers/meta-freescale
   meta-freescale-3rdparty:
     url: "https://github.com/Freescale/meta-freescale-3rdparty.git"
-    refspec: mickledore
+    refspec: scarthgap
     path: layers/meta-freescale-3rdparty
   meta-freescale-distro:
     url: "https://github.com/Freescale/meta-freescale-distro.git"
-    refspec: mickledore
+    refspec: scarthgap
     path: layers/meta-freescale-distro
   meta-imx:
     url: "https://github.com/nxp-imx/meta-imx.git"
-    refspec: mickledore-6.1.22-2.0.0 
+    refspec: scarthgap-6.1.22-2.0.0 
     path: layers/meta-imx
     layers:
       meta-bsp:
@@ -74,15 +74,15 @@ repos:
       meta-v2x:
   meta-real-time-edge:
     url: "https://github.com/nxp-real-time-edge-sw/meta-real-time-edge.git"
-    refspec: mickledore
+    refspec: scarthgap
     path: layers/meta-real-time-edge
   meta-rtos-industrial:
     url: "https://github.com/nxp-real-time-edge-sw/meta-rtos-industrial.git"
-    refspec: mickledore
+    refspec: scarthgap
     path: layers/meta-rtos-industrial
   meta-nxp-demo-experience:
     url: "https://github.com/nxp-imx-support/meta-nxp-demo-experience.git"
-    refspec: mickledore
+    refspec: scarthgap
     path: layers/meta-nxp-demo-experience
   meta-nxp-harpoon:
     url: "https://github.com/NXP/meta-nxp-harpoon"
